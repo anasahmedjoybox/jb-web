@@ -1,0 +1,418 @@
+/*Montserrat*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* poppines */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --primary-yellow: #EBCE46;
+  --primary-red: #F14530; 
+}
+*,
+*::before,
+*::after {
+  transition: all .2s ease-in-out ;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-heading {
+  color: var(--primary-yellow);
+}
+input:focus {
+  outline: none;
+}
+
+
+/* start nav and hero sec  */
+#section {
+    /* background: url('assets/images/home-page-img/home-baner.webp'); */
+    max-width: 1200px;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+  }
+  form.example input::placeholder {
+    color: #000;
+    font-weight: 700;
+  }
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /* end nav and hero sec */
+  /* start first card sec  */
+.first-card-sec .card-text {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.first-card-sec img {
+  filter: grayscale(1);
+  transition: all 0.3s ease-in-out;
+}
+.first-card-sec:hover .card-text {
+  opacity: 1;
+}
+.first-card-sec:hover img {
+  filter: grayscale(0);
+}
+/* end first card sec  */
+  /* strat logos slider  */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 5)); /* Adjusted the number of slides */
+    }
+  }
+  
+  .logo-slider-container {
+    background: white;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 1100px;
+  }
+  .logo-slider-container::before, .logo-slider-container::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .logo-slider-container::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .logo-slider-container::before {
+    left: 0;
+    top: 0;
+  }
+  .logo-slider-container .logo-slide-track {
+    animation: scroll 20s linear infinite; /* Halved the animation duration */
+    display: flex;
+    width: calc(250px * 10); /* Adjusted the total width */
+  }
+  .logo-slider-container .logo-slide-1 {
+    width: 270px;
+  }
+  .logo-slider-container .logo-slide-2 {
+    width: 350px;
+  }
+  /* end logos slider  */
+  /* start Categories slider */
+  .bgFliter {
+    backdrop-filter: blur(4px) brightness(50%) saturate(0%);
+  }
+  /* end Categories slider */
+  /* start Membership Plans */
+  @media only screen and (max-width: 400px){
+    .plan-card {
+      width: 100% !important;
+    }
+  }
+  /* end Membership Plans  */
+  /* start Here how our membership works  */
+  .timeline {
+    position: relative;
+    width: fit-content;
+    padding: 15px 10px;
+  }
+
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background: var(--primary-yellow);
+    top: 80px;
+    bottom: 0;
+    height: 850px;
+  }
+
+  .timeline-container {
+    padding: 15px 30px;
+    position: relative;
+  }
+
+  .timeline-container::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: var(--primary-yellow);
+    border-radius: 16px;
+    z-index: 1;
+  }
+
+  .timeline-container.timeline-right::after {
+    left: -8px;
+  }
+  @media only screen and (max-width: 660px) {
+    .timeline::after {
+    top: 0;
+    height: 100%;
+  }
+  .timeline-container {
+    padding: 20px 0px 20px 30px;
+    position: relative;
+  }
+  }
+  /* end Here how our membership works  */
+  /* <!-- start List your restaurant or shop on joybox sec ! --> */
+.restaurantBgImg {
+  /* background-image: url('assets/images/home-page-img/Mask\ group.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+}
+.restaurantBgImgsec {
+  /* background-image: url('assets/images/home-page-img/yellow-bg.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+}
+@media only screen and (max-width: 1024px) {
+  .restaurantBgImg {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .restaurantBgImgsec {
+    background-image: none;
+    background-color: var(--primary-yellow);
+    height: auto;
+  }
+}
+/* <!-- end List your restaurant or shop on joybox sec ! --> */
+/* <!-- start exclusive slide  --> */
+.exclusive-slide-container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 40px 0;
+}
+.exclusive-slide-container .slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+}
+.exclusive-slide-container .slide-content .card {
+  border-radius: 25px;
+  background-color: #F5F5F5;
+  transition: all 0.4s ease-in-out;
+}
+.exclusive-slide-container .slide-content .card:hover {
+  background-color: var(--primary-yellow);
+}
+.exclusive-slide-container .slide-content .card:hover .change-icon-color i {
+  color: #fff;
+}
+.exclusive-slide-container .slide-content .card .image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.exclusive-slide-container .slide-content .card .image-content {
+  row-gap: 5px;
+  padding: 15px 10px;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 25px !important;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+.exclusive-slide-container .slide-content {
+  margin: 0 10px;
+  overflow: hidden;
+}
+}
+/* <!-- end exclusive slide  --> */
+  /* strat customer reviews  */
+  @keyframes scrollreviews {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 5)); /* Adjusted the number of slides */
+    }
+  }
+  
+  .customer-reviews-container {
+    background: white;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+  }
+  .customer-reviews-container::before, .customer-reviews-container::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .customer-reviews-container::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .customer-reviews-container::before {
+    left: 0;
+    top: 0;
+  }
+  .customer-reviews-container .customer-reviews-track {
+    animation: scrollreviews 20s linear infinite; /* Halved the animation duration */
+    display: flex;
+    width: calc(250px * 10); /* Adjusted the total width */
+  }
+  .customer-reviews-container .logo-slide-1 {
+    width: 270px;
+  }
+  /* end customer reviews  */
+  /* start footer  */
+  .homeContactForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media only screen and (max-width: 768px) {
+    .homeContactForm {
+      position: static;
+      top: 0;
+      left: 0;
+      transform: translate(-0%, -0%);
+    } 
+  }
+  .homeContactForm form div input::placeholder {
+    color: #000;
+  }
+  .homeContactForm form div textarea::placeholder {
+    color: #000;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  .footerBgImg {
+    /* background-image: url('../assets/images/home-page-img/footer-yellowbg.webp'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+.switch {
+    --secondary-container: #00000071;
+    --primary: #fff;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.7em;
+    height: 1.8em;
+  }
+
+  .switch>input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313033;
+    transition: .2s;
+    border-radius: 30px;
+  }
+ 
+  .switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.15em;
+    background-color: #aeaaae;
+    transition: .4s;
+  }
+
+  .switch-input:checked + .switch-slider::before {
+    background-color: var(--primary);
+  }
+
+  .switch-input:checked + .switch-slider {
+    background-color: var(--secondary-container);
+  }
+
+  .switch-input:focus + .switch-slider {
+    box-shadow: 0 0 1px var(--secondary-container);
+  }
+
+  .switch-input:checked + .switch-slider:before {
+    transform: translateX(1.5em);
+  }
+
+  .tabs-box.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.tabs-box .tab {
+    cursor: pointer;
+    font-size: 1.08rem;
+    white-space: nowrap;
+    /* padding: 3px 20px; */
+    border: none;
+}
+
+.tabs-box .tab:hover {
+    color: var(--primary-red);
+    font-weight: 600;
+    border-bottom: 4px solid var(--primary-red);
+}
+
+.tab:hover {
+    display: block;
+}
+
+.tabs-box.dragging .tab {
+    user-select: none;
+    pointer-events: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 100%;
+}
