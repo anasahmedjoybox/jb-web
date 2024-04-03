@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- link tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- link style css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- drawer  -->
+    <div id="drawer"
+        class="w-full max-w-[180px] hidden bg-[#EBCE46] sm:hidden shadow p-[10px] absolute right-[8px] top-[10px] z-20 rounded-[10px]">
+        <div class="w-full p-[10px] flex justify-between items-center">
+            <div id="drawer-axe" onclick="showMenuDrawer(false)"
+                class="w-[30px] h-[30px] flex justify-center items-center hover:bg-[#fff] rounded-[50%] group cursor-pointer">
+                <i class="fa-solid fa-xmark group-hover:text-[red]"></i>
+            </div>
+            <div class="w-[70px] h-[70px] bg-[#fff] rounded-[50%] flex justify-center items-center ml-auto">
+                <img src="assets/images/joybox-color-logo.png" class="w-[70%] object-contain" alt="">
+            </div>
+        </div>
+        <div class="w-full h-[1px] bg-[#fff]"></div>
+        <div class="w-full mt-[10px] mb-[30px]">
+            <div class="w-full bg-[#fff] ml-auto cursor-pointer rounded-[10px] mt-[10px]">
+                <div
+                    class="px-[5px] py-[10px]  flex bg-[#EBCE46] items-center rounded-tr-[10px] hover:bg-[#fff] cursor-pointer group">
+                    <img src="assets/images/Person.png" class="w-[24px] object-contain mr-[5px] lg:mr-[10px]" alt="">
+                    <p class="capitalize font-[700] text-[11.73px]  tracking-tight group-hover:text-[#F14530]">Hi,
+                        Anas
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full bg-[#fff] ml-auto cursor-pointer rounded-[10px] mt-[10px]">
+                <div
+                    class="px-[5px] py-[10px]  flex bg-[#EBCE46] items-center rounded-tr-[10px] hover:bg-[#fff] cursor-pointer group">
+                    <i class="fa-solid fa-cart-shopping mr-[5px] text-[#F14530] group-hover:text-[#000]"></i>
+                    <p class="capitalize font-[700] text-[11.73px]  tracking-tight group-hover:text-[#F14530]">
+                        cart
+                    </p>
+                </div>
+            </div>
+            <div class="w-full bg-[#fff] ml-auto cursor-pointer rounded-[10px] mt-[10px]">
+                <div
+                    class="px-[5px] py-[10px]  flex bg-[#EBCE46] items-center rounded-tr-[10px] hover:bg-[#fff] cursor-pointer group">
+                    <i class="fa-solid fa-ticket mr-[5px] text-[#F14530] group-hover:text-[#000]"></i>
+                    <p class="capitalize font-[700] text-[11.73px]  tracking-tight group-hover:text-[#F14530]">
+                        Voucher
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="bg-[#F14530] w-[100%]">
+        <div class="max-w-[1200px] m-auto flex py-[14px] items-center justify-center sm:justify-end">
+            <div class="flex justify-center items-center gap-[10px] sm:gap-[10px] flex-col sm:flex-row text-[14px]">
+                <div>
+                    <ul class="flex items-center">
+                        <li class="border-r-[2px] px-2">
+                            <a href="" class="text-[#F5D547] font-[500]">Register Your Brand</a>
+                        </li>
+                        <li class="sm:border-r-[2px] px-2">
+                            <a href="" class="text-[#fff]">Deals</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flex items-center">
+                        <li class="px-2">
+                            <a href="" class="flex items-center justify-center text-[#fff] gap-1">
+                                <img src="assets/images/home-page-img/pak.png" alt="" />
+                                <span>/</span>
+                                <span>English</span>
+                                <span>/</span>
+                                <span>USD</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-[10px] bg-[#fff] rounded-full text-[#F14530] p-[2px]"></i>
+                            </a>
+                        </li>
+                        <li class="px-2">
+                            <a href="" class="text-[#fff]">
+                                <span>Help </span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-[10px] bg-[#fff] rounded-full text-[#F14530] p-[2px]"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>   
+
+    <!-- banner -->
+    <div class="w-full bg-[#fff] ">
+        <div
+            class="w-full mr-auto max-w-[360px] ml-auto bg-[#F5D83E] pt-[1rem] pl-[1rem] pr-[1rem] pb-[1rem] rounded-b-[2.5rem] mr-auto ml-auto lg:pr-[2rem] lg:pl-[2rem] lg:max-w-[1200px] lg:max-w-[1000px] sm:max-w-[630px] md:max-w-[740px]">
+            <!-- Banner Navbar -->
+            <div class="w-full flex justify-between items-center">
+                <img class="w-[50px] object-contain lg:w-[75px]" src="assets/images/joyBoxLogo.png" alt="joy-box-logo">
+                <div class="flex justify-between items-center gap-1 relative lg:gap-2">
+                    <div
+                        class="w-full sm:min-w-[300px]  lg:min-w-[415px] p-[5px] sm:p-[10px] flex justify-between items-center bg-[#b3b3b380] rounded-[10px]">
+                        <input type="text" placeholder="What are you searching for?"
+                            class="map w-[90%] text-[13px] lg:text-[20px] text-[#000] font-semibold border-none focus:border placeholder-[#000] focus:outline-none bg-transparent p-0">
+                        <img src="assets/images/map-strock.png" class="w-[18px] md:w-[22px] object-contain" alt="">
+                    </div>
+
+                    <div class="flex gap-2 items-center">
+                        <p class="capitalize hidden sm:block font-[500]">maps</p>
+                        <label class="switch inline-block hidden sm:block relative w-14 h-7">
+                            <input type="checkbox" class="switch-input absolute opacity-0 w-0 h-0">
+                            <span
+                                class="switch-slider absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-800 transition duration-200 rounded-full"></span>
+                        </label>
+                    </div>
+                    <div
+                        class="p-[5px] hidden min-w-[103px] hidden md:block lg:flex justify-between items-center rounded-tr-[10px] cursor-pointer group lg:p-[10px]">
+                        <img src="assets/images/Person.png"
+                            class="w-[24px]  object-contain sm:mr-auto sm:ml-auto lg:mr-[10px]" alt="">
+                        <p
+                            class="capitalize font-[700] text-[11.73px]  tracking-tight group-hover:text-[#F14530] sm:text-center">
+                            Hi,
+                            Anas
+                        </p>
+                        <!-- profile dropdown -->
+                        <div
+                            class="absolute w-full max-m-[187px] p-[10px] bg-[#fff] top-[44px] left-0 rounded-b-[10px] hidden">
+                            <ul class="pt-[15px]">
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Profile
+                                </li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Order</li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Referral
+                                </li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Address
+                                </li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">Logout</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="assets/images/cart.png"
+                        class="w-[20px] mr-[5px] object-contain lg:w-[25px] hidden sm:block" alt="">
+                    <img src="assets/images/wallet.png" class="w-[25px]  lg:w-[30px] hidden sm:block" alt="">
+
+                    <div class="ml-[5px] md:hidden" onclick="showMenuDrawer(true)">
+                        <i class="fa-solid fa-bars hover:text-[#f14530] cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Banner Heading -->
+            <div
+                class="w-full flex justify-between max-w-[308px] mr-auto ml-auto items-center flex mt-[20px] sm:max-w-[600px] md:max-w-[720px] lg:max-w-[950px] xl:max-w-[1250px] xl:pl-[10px] xl:pr-[10px]  ">
+                <div class="w-[50%] h-auto xl:p-[10px] ">
+                    <h1
+                        class="text-[10px] font-[600] tracking-[-0.03rem] relative sm:text-[20px] md:text-[23px] lg:text-[29px] xl:text-[37px]">
+                        JoyBox Menu Unleash Flavor
+                        and <span class="text-[#F14530]">Savings with Exclusive</span> McDonald's Delights!
+                        <img class="w-full max-w-[10px] object-contain absolute bottom-[3px] right-[40px] sm:max-w-[20px] sm:bottom-[4px] sm:right-[67px] md:max-w-[25px] md:bottom-[5px] lg:max-w-[32px] lg:right-[121px] xl:right-[94px] lg:bottom-[7px]"
+                            src="assets/images/menu-banner -image.png" alt="">
+                    </h1>
+                </div>
+                <div class="w-[50%] h-auto relative  mb-[-44px] sm:mb-[-70px] md:mb-[-95px] lg:mb-[-124px]">
+                    <img class="w-full object-contain z-10 relative" src="assets/images/pngwing 100.png" alt="">
+                    <img class="absolute max-w-[120px] left-[-39px] bottom-[2px] sm:max-w-[240px] sm:left-[-75px] md:max-w-[288px] md-left-[85px] w-full z-0         lg:left-[-120px] lg:max-w-[385px]"
+                        src="assets/images/menu-banner -image.png" alt="">
+                </div>
+            </div>
+            <div
+                class="w-[50px] h-[50px] ml-[10px] mb-[-25px] rounded-[10px] bg-[red] rounded-[10px] sm:w-[90px] sm:h-[90px] sm:mb-[-39px] md:w-[115px] md:h-[115px]  xl:ml-[30px] xl:mb-[-44px] lg:mb-[-49px] lg:h-[150px] lg:w-[150px]">
+                <img src="assets/images/mc-logo.png" class="w-full object-contain" alt="">
+            </div>
+        </div>
+
+        <!-- location heading -->
+        <div class="w-full max-w-[1200px] mr-auto ml-auto p-1 bg-red mt-[50px] mb-[10px] lg:px-[30px]">
+            <h1 class="font-[600] text-[30px] text-[#000] tracking-[-0.02rem] text-center lg:text-left">McDonald’s</h1>
+            <div class="w-full max-w-[1300px] flex flex-wrap justify-center gap-3 mt-[20px] lg:justify-start">
+                <div class="w-fit flex gap-2 items-center">
+                    <i class="fa-regular fa-clock text-[15px] lg:text-[25px] text-[#f14530]"></i>
+                    <h1 class="text-[15px]">Opened until Thu 05:00AM</h1>
+                </div>
+
+                <div class="w-fit flex gap-2 items-center ml-[10px]">
+                    <i class="fa-solid fa-location-dot lg:text-[15px] lg:text-[25px] text-[#f14530]"></i>
+                    <h1 class="text-[15px]">Opened until Thu 05:00AM</h1>
+                </div>
+            </div>
+            <h1 class="mt-[15px] text-[12px] text-center lg:text-left lg:text-[20px]">Minimum Order : 500 PKR | All
+                Prices inclusive of VAT!</h1>
+        </div>
+
+        <div class="w-full max-w-[340px] mr-auto ml-auto sm:max-w-[640px] md:max-w-[740px] lg:max-w-[1250px]">
+            <div class="wrapper p-[35px] relative overflow-x-hidden container">
+                <ul class="tabs-box flex gap-[12px] list-none overflow-x-hidden scroll-smooth">
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Region</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px] active">Fast Food</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Tags</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Price range</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Open now</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Most viewed</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Newest</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Recommended</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Rating</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Discount</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Near by me</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Reviews</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Delicious</li>
+                    <li class="tab text-[12px] py-[5px] px-[2px] lg:px-[20px] sm:px-[10px]">Urgent</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- deals tabs -->
+        <div
+            class="w-full max-w-[1200px] mr-auto ml-auto mt-[15px] mb-[15px] lg:mt-[30px] flex-col sm:flex-row lg:mb-[30px] p-1 flex justify-center sm:justify-around items-center flex-wrap lg:justify-between  lg:px-[30px]">
+            <div class="w-fit flex justify-center h-auto p-1 gap-[2px] flex-wrap lg:justify-between sm:gap-[5px]">
+                <button
+                    class="w-fit px-[8px] py-[10px] bg-[#F14530] lg:text-[20px] md:px-[15px] rounded-full text-[12px] text-[#fff] lg:px-[25px] ">Menu</button>
+                <button
+                    class="w-fit px-[8px] py-[10px] bg-[#F14530] lg:text-[20px] md:px-[15px] md:min-w-[150px]  rounded-full text-[12px] max-w-[100px] text-[#fff] lg:px-[25px] lg:min-w-[200px]">Combo
+                    Deals</button>
+                <button
+                    class="w-fit px-[8px] py-[10px] bg-[#F14530] lg:text-[20px] md:px-[15px] rounded-full text-[12px] text-[#fff] lg:px-[25px]">Membership</button>
+                <button
+                    class="w-fit px-[8px] py-[10px] bg-[#F14530] lg:text-[20px] md:px-[15px] rounded-full text-[12px] text-[#fff] lg:px-[25px]">Vouchers</button>
+            </div>
+            <div class="w-fit flex justify-between h-auto p-1 gap-[10px]">
+                <button
+                    class="w-fit lg:px-[25px] py-[10px] px-[10px] text-[12px] lg:text-[20px] bg-[#F14530] rounded-full text-[#fff]">Reset</button>
+                <button
+                    class="w-fit lg:px-[25px] py-[10px] px-[10px] text-[12px] lg:text-[20px] bg-[#F14530] rounded-full text-[#fff]">Filters</button>
+            </div>
+        </div>
+
+        <!-- Braekfast -->
+        <div class="w-full h-auto mr-auto ml-auto max-w-[1200px] p-10 lg:mt-[50px] ">
+            <h1 class="text-[30px] font-[600] mb-[30px] text-center ml-[20px] md:text-left">Breakfast</h1>
+            <div class="w-full h-auto grid grid-cols-1 gap-10  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+                <!-- menu card -->
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-0.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin w/Egg Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-1.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin w/Egg Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-2.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin
+                        Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-3.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg McMuffin Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-4.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg & Cheese McMuffin
+                        Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-5.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Muffin Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-6.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Hot Cakes</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-7.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Big Breakfast</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-8.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg N’ Sausage Wrap</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-9.png" width="w-full object-contain relative z-20" alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg N’ Hashbrowns Wrap</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-10.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Omelette N’ Tomato Wrap </p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!--beef-->
+        <div class="w-full h-auto mr-auto ml-auto max-w-[1200px]  p-10 mt-[50px]">
+            <h1 class="text-[30px] font-[600] mb-[30px] text-center ml-[20px] md:text-left">Beef</h1>
+            <div class="w-full h-auto grid grid-cols-1 gap-10  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+                <!-- menu card -->
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-11.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin w/Egg Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-12.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin w/Egg Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-13.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin
+                        Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-14.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg McMuffin Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-15.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg & Cheese McMuffin
+                        Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-16.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Muffin Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- chicken and fish -->
+
+        <div class="w-full h-auto mr-auto ml-auto max-w-[1200px]  p-10 mt-[50px]">
+            <h1 class="text-[30px] font-[600] mb-[30px] text-center ml-[20px] md:text-left">Chicken & Fish</h1>
+            <div class="w-full h-auto grid grid-cols-1 gap-10  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+                <!-- menu card -->
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-17.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin w/Egg Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-18.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin w/Egg Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-19.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Sausage McMuffin
+                        Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-20.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg McMuffin Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-21.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Egg & Cheese McMuffin
+                        Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-22.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Chicken Muffin Meal</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- chicken crispy -->
+
+
+        <div class="w-full h-auto mr-auto ml-auto max-w-[1200px]  p-10 mt-[50px]">
+            <h1 class="text-[30px] font-[600] mb-[30px] text-center ml-[20px] md:text-left">Crispy Chicken</h1>
+            <div class="w-full h-auto grid grid-cols-1 gap-10  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+                <!-- menu card -->
+                <div
+                    class="w-full max-w-[250px] mr-auto ml-auto relative p-[20px] cursor-pointer rounded-[10px] bg-[#00000017] m-[10px] group hover:bg-[#f5d83e] ">
+                    <img src="assets/images/menuCard-border.png"
+                        class="w-[120px] absolute top-[-20px] hidden left-[67px] transition-all duration-100 ease-in z-0 delay-200 transform  group-hover:flex"
+                        alt="">
+                    <div class="w-full p-1 mr-auto ml-auto relative transform group-hover:scale-[1.25]">
+                        <img src="assets/images/menu-carditem-23.png" width="w-full object-contain relative z-20"
+                            alt="">
+                    </div>
+                    <p class="font-[600] text-[18px] leading-[1.2] mt-[10px]">Hot N’ Crispy</p>
+                    <p class="text-[12px] font-[400] leading-[15.6px] tracking-[-0.03rem] text-[#4A4A4A] mt-[5px]">The
+                        best
+                        way to start the day!</p>
+                    <div class="w-full flex justify-between items-center mt-[24px]">
+                        <div class="w-fit flex items-center">
+                            <p class="text-[15px] font-[600] ">Rs. <span>750.00</span></p>
+                            <p class="text-[15px] ml-[10px] font-[600] text-[#4A4A4A]"><strike>Rs.
+                                    <span>800.00</span></strike></p>
+                        </div>
+                        <div
+                            class="w-[32px] h-[32px] bg-[#F14530] rounded-[50%] p-[10px] flex justify-center items-center">
+                            <i class="fa-solid fa-cart-shopping text-[#fff]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- start footer  -->
+        <div class="mt-[0px] md:mt-[150px] lg:mt-[120px] max-w-[1200px] m-auto">
+            <!-- first sec  -->
+            <div class="relative">
+                <div class="hidden md:block">
+                    <img src="assets/images/home-page-img/map.webp" alt="" />
+                </div>
+                <div class="homeContactForm md:w-[400px]">
+                    <form action=""
+                        class="bg-[#f5f5f5] md:rounded-[20px] shadow-xl px-[15px] md:px-[30px] py-[40px] md:py-[30px]">
+                        <div class="flex items-center justify-center flex-col gap-[10px]">
+                            <h1 class="text-center text-[#212529] text-[2.2rem] font-[500] mb-5">
+                                Contact Us
+                            </h1>
+                            <input class="bg-[#d9d9d9] w-[100%] rounded-full px-[20px] py-[10px]" type="text" name=""
+                                placeholder="Name" />
+                            <input class="bg-[#d9d9d9] w-[100%] rounded-full px-[20px] py-[10px]" type="email" name=""
+                                placeholder="Email" />
+                            <input class="bg-[#d9d9d9] w-[100%] rounded-full px-[20px] py-[10px]" type="number" name=""
+                                placeholder="Contact number" />
+                            <textarea class="bg-[#d9d9d9] w-[100%] rounded-[20px] px-[20px] py-[10px] resize-none"
+                                placeholder="Message" name="" id="" cols="30" rows="6"></textarea>
+                            <button class="mt-3 bg-[#f5d547] py-[10px] px-[30px] rounded-full font-semibold">
+                                send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- second sec  -->
+            <div class="footerBgImg" style="background-image: url('assets/images/home-page-img/footer-yellowbg.webp');">
+
+                <div
+                    class="flex justify-between gap-4 md:gap-0 md:items-center flex-col md:flex-row lg:items-start py-[30px] md:py-[60px] px-[20px] md:px-[50px]">
+                    <div class="w-[100%] md:w-[350px]">
+                        <img src="assets/images/home-page-img/footer-logo.png" class="mb-4" alt="" />
+                        <p class="text-[13px] my-3 text-justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into
+                            electronic typesetting, rema
+                        </p>
+                        <p class="text-[13px] my-3 text-justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s, when an unknown printer took a galley of
+                            type
+                        </p>
+                        <a href="#"><i
+                                class="fa-brands fa-facebook-f text-[#fff] bg-[#000] text-[20px] p-[5px] rounded-[5px]"></i></a>
+                        <a href="#"><i
+                                class="fa-brands fa-instagram text-[#fff] bg-[#000] text-[20px] p-[5px] rounded-[5px]"></i></a>
+                    </div>
+                    <div>
+                        <img src="assets/images/home-page-img/joybox-brand.webp" alt="" />
+                    </div>
+                </div>
+                <p class="text-[#212529] font-semibold text-center pb-[20px]">
+                    © 2023 JOYBOX
+                </p>
+            </div>
+        </div>
+        <!-- end footer  -->
+
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script src="assets/js/app.js"></script>
+</body>
+
+</html>

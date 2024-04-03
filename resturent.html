@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- link tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- link style css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="bg-[#F14530] w-[100%]">
+        <div class="max-w-[1200px] m-auto flex py-[14px] items-center justify-center sm:justify-end">
+            <div class="flex justify-center items-center gap-[10px] sm:gap-[10px] flex-col sm:flex-row text-[14px]">
+                <div>
+                    <ul class="flex items-center">
+                        <li class="border-r-[2px] px-2">
+                            <a href="" class="text-[#F5D547] font-[500]">Register Your Brand</a>
+                        </li>
+                        <li class="sm:border-r-[2px] px-2">
+                            <a href="" class="text-[#fff]">Deals</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flex items-center">
+                        <li class="px-2">
+                            <a href="" class="flex items-center justify-center text-[#fff] gap-1">
+                                <img src="assets/images/home-page-img/pak.png" alt="" />
+                                <span>/</span>
+                                <span>English</span>
+                                <span>/</span>
+                                <span>USD</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-[10px] bg-[#fff] rounded-full text-[#F14530] p-[2px]"></i>
+                            </a>
+                        </li>
+                        <li class="px-2">
+                            <a href="" class="text-[#fff]">
+                                <span>Help </span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-[10px] bg-[#fff] rounded-full text-[#F14530] p-[2px]"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- banner -->
+    <div class="w-full bg-[#fff] ">
+        <div
+            class="w-full max-w-[360px] bg-[#F5D83E] pt-[1rem] pl-[1rem] pr-[1rem] pb-[3rem] rounded-b-[4rem] mr-auto ml-auto sm:pb-[6rem] lg:pb-[7rem] lg:pl-[1.5rem] lg:pr-[1.5rem] sm:max-w-[630px] md:max-w-[700px] lg:max-w-[1200px]">
+            <!-- Banner Navbar -->
+            <div class="w-full flex justify-between items-center">
+                <img class="w-[50px] object-contain lg:w-[75px]" src="assets/images/joyBoxLogo.png" alt="joy-box-logo">
+                <div class="flex justify-between items-center gap-1 relative lg:gap-2">
+                    <div
+                        class="p-[5px] flex justify-between items-center rounded-tr-[10px] cursor-pointer group lg:bg-[#fff] lg:p-[10px]">
+                        <img src="assets/images/Person.png" class="w-[24px] object-contain mr-[5px] lg:mr-[10px]"
+                            alt="">
+                        <p class="capitalize font-[700] text-[11.73px] tracking-tight group-hover:text-[#f5d83e]">Hi,
+                            Anas</p>
+
+                        <!-- profile dropdown -->
+                        <div
+                            class="absolute w-full max-m-[187px] p-[10px] bg-[#fff] top-[44px] left-0 rounded-b-[10px] hidden">
+                            <ul class="pt-[15px]">
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Profile
+                                </li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Order</li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Referral
+                                </li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">My Address
+                                </li>
+                                <li class="font-[700] text-[12px] pt-[5px] pb-[10px] hover:text-[#f5d83e]">Logout</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <img src="assets/images/cart.png" class="w-[20px] mr-[5px] object-contain  lg:w-[25px]" alt="">
+                    <img src="assets/images/wallet.png" class="w-[25px]  lg:w-[30px]" alt="">
+                </div>
+            </div>
+            <!-- Banner Heading -->
+            <div class="w-full max-w-[758px] mr-auto ml-auto text-center mt-[20px] border-t-10 mb-[10px]">
+                <h1
+                    class="font-[400] text-[22px] tracking-[-0.03rem] sm:text-[25px] md:text-[29px] lg:leading-[40.61px] lg:text-[40px] ">
+                    Explore Cuisines For</h1>
+                <h1
+                    class="font-[600] text-[22px] tracking-[-0.03rem] sm:text-[27px] md:text-[29px] lg:leading-[40.61px] lg:text-[40px]">
+                    An All-Embracing Menu</h1>
+            </div>
+
+            <!-- Banner Tropping -->
+            <div class="w-full flex justify-center items-center flex-col relative">
+                <img src="assets/images/rotate-top.png"
+                    class="absolute top-[205px] w-full max-w-[270px] sm:max-w-[465px] sm:top-[197px] md:top-[197px]  lg:max-w-[750px] lg:top-[259px] "
+                    alt="">
+                <img src="assets/images/toppng.png"
+                    class="w-full max-w-[270px] relative z-[99] sm:max-w-[350px] lg:max-w-[480px]" alt="">
+            </div>
+            <div
+                class="w-full relative max-w-[318px] mr-auto ml-auto z-[10] flex justify-between flex-wrap sm:max-w-[550px] lg:mt-[30px] lg:max-w-[855px] ">
+                <!-- banner card -->
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] relative rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] lg:max-w-[180px] lg:h-[180px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-1.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] lg:max-w-[180px] lg:h-[180px] xl:mt-[20px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        Pizza
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-2.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] hidden bg-cover sm:block lg:max-w-[180px] lg:h-[180px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        Pakistani Food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-3.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] hidden bg-cover xl:block lg:max-w-[180px] lg:h-[180px] xl:mt-[20px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        Burgers
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-4.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+            </div>
+
+            <div
+                class="w-full relative max-w-[318px] mr-auto ml-auto z-[10] flex justify-between flex-wrap sm:max-w-[550px] lg:mt-[30px] lg:max-w-[855px] mt-[10px] md:mt-[10px]">
+                <!-- banner card -->
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] lg:max-w-[180px] lg:h-[180px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-5.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] lg:max-w-[180px] lg:h-[180px] xl:mt-[20px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-6.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] hidden bg-cover sm:block lg:max-w-[180px] lg:h-[180px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-7.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] hidden bg-cover xl:block lg:max-w-[180px] lg:h-[180px] xl:mt-[20px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-8.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+            </div>
+            <div
+                class="w-full relative max-w-[318px] mr-auto ml-auto z-[10] flex justify-between flex-wrap sm:max-w-[550px] lg:mt-[30px] lg:max-w-[855px] mt-[10px] md:mt-[10px]">
+                <!-- banner card -->
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] lg:max-w-[180px] lg:h-[180px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-9.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] lg:max-w-[180px] lg:h-[180px] xl:mt-[20px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-10.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] hidden bg-cover sm:block lg:max-w-[180px] lg:h-[180px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-11.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+                <div
+                    class="w-full max-w-[100px] cursor-pointer group h-[100px] mr-[10px] relative ml-[10px] rounded-[10px] bg-cover sm:max-w-[140px] sm:h-[140px] hidden bg-cover xl:block lg:max-w-[180px] lg:h-[180px] xl:mt-[20px]">
+                    <p
+                        class="capitalize text-[#fff] text-[15px] font-[500] tracking-tight lg:text-[17pxpx] lg:leading-[29.17px] absolute top-[10px] left-[10px]">
+                        fast
+                        food
+                    </p>
+                    <div
+                        class="w-[80%] h-[70px] bg-[#f145309c] absolute hidden group-hover:block bottom-[-2px] left-[15px] flex justify-center items-center rounded-t-[10px]">
+                        <h1 class="text-[#fff] font-[600] text-[30px] flex justify-center items-center">+300 <span
+                                class="text-[10px]">more</span> </h1>
+                    </div>
+                    <img src="assets/images/banner-image-12.png" class="w-full object-contain rounded-[10px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[1340px] h-10px mr-auto ml-auto mt-[-30px] lg:mt-[-60px] xl:mt-[-80px]">
+            <div class="w-full flex justify-center items-center flex-col relative">
+                <img src="assets/images/banner-round-bottom.png"
+                    class="absolute w-[260px] bottom-[45px] sm:w-[460px] sm:bottom-[105px] lg:w-[770px] lg:bottom-[20px] "
+                    alt="">
+                <img src="assets/images/tropping-2.png"
+                    class="w-full max-w-[265px] relative z-[99]  sm:max-w-[460px] lg:max-w-[585px]  " alt="">
+            </div>
+        </div>
+
+        <!-- top rating -->
+        <div class="w-full h-auto p-10 mt-[20px]">
+            <div class="w-full max-w-[1350px] mr-auto ml-auto text-center ">
+                <p class="text-[#000] font-[600] text-[14px] tracking-[-0.03rem]">Top Rated</p>
+                <h3 class="font-[600] text-[35.19px] tracking-[-0.03rem]">Restaurant</h3>
+
+                <!-- card container -->
+                <div class="w-full mt-[20px] flex justify-center items-center flex-wrap md:gap-4 xl:gap-0">
+                    <!-- card design -->
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/Espresso-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Espresso.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Espresso</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Tipu Sultan Road</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/Cote-Rotie-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Cote-Rotie.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Cote Rotie</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Clifton</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/pizza-hut-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Pizza-hut.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Pizza Hut</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Tipu Sultan Road</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/Burger-Lab-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Burger-Lab.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Burger Lab</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Gulshan e Iqbal</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- view more  -->
+        <div class="w-full h-auto mb-[20px] cursor-pointer">
+            <div class="w-full max-w-[1350px] mr-auto ml-auto text-center ">
+                <div class="w-full flex justify-center items-center">
+                    <p>View more</p>
+                    <i class="fa-solid fa-chevron-down text-[8px] ml-[5px] p-[3px] bg-[#F14530] rounded-[50%] text-[#fff]"
+                        fill="#F14530">
+                    </i>
+                </div>
+            </div>
+        </div>
+        <!-- status -->
+        <div class="w-full h-auto mb-[200px] bg-[#F14530] p-[20px] pt-[25px] lg:mt-[100px] lg:mb-[100px] ">
+            <div
+                class="w-full max-w-[1350px] mr-auto ml-auto flex flex-col items-center lg:flex-row lg:justify-around lg:items-center">
+                <h1 class="text-[2rem] text-center text-[#fff] font-[400]">Tired of waiting <span
+                        class="text-[#EBCE46]">for your
+                        Meal</span> ?</h1>
+                <img src="assets/images/Chicken-Biryani-.png"
+                    class="w-full max-w-[400px] object-contain mb-[-200px] lg:mb-[-100px] lg:mt-[-100px]" alt="">
+            </div>
+        </div>
+        <!-- top rating -->
+        <div class="w-full h-auto p-10 mt-[20px]">
+            <div class="w-full max-w-[1350px] mr-auto ml-auto text-center ">
+                <p class="text-[#000] font-[600] text-[14px] tracking-[-0.03rem]">Daily</p>
+                <h3 class="font-[600] text-[35.19px] tracking-[-0.03rem]">Trending</h3>
+
+                <!-- card container -->
+                <div class="w-full mt-[20px] flex justify-center items-center flex-wrap md:gap-4 xl:gap-0">
+                    <!-- card design -->
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/Espresso-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Espresso.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Espresso</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Tipu Sultan Road</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/Cote-Rotie-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Cote-Rotie.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Cote Rotie</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Clifton</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/pizza-hut-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Pizza-hut.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Pizza Hut</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Tipu Sultan Road</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full max-w-[273px] m-[10px] sm:max-w-[250px] md:max-w-[300px] md:mt-[50px] lg:max-w-[400px] xl:max-w-[273px]">
+                        <div class="w-full h-auto relative">
+                            <div class="absolute w-[20%] h-[20%] rounded-[50%] top-[10px] left-[10px]">
+                                <img src="assets/images/Burger-Lab-logo.png" class="w-full object-contain rounded-[50%]"
+                                    alt="">
+                            </div>
+                            <img class="w-full object-contain rounded-[20px]" src="assets/images/Burger-Lab.png" alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-1 mt-[5px] mb-[10px]">
+                            <p class="text-[#000] text-[22px] font-[700]">Burger Lab</p>
+                            <i class="fa-solid fa-heart text-[25px] text-[#F14530]"></i>
+                        </div>
+                        <p class="text-[#00000080] tracking-[-0.03rem] text-[20px]">Gulshan e Iqbal</p>
+                        <div class="mt-[5px]">
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-solid fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                            <i class="fa-regular fa-star text-[#EBCE46]"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- view more  -->
+        <div class="w-full h-auto mb-[20px] cursor-pointer">
+            <div class="w-full max-w-[1350px] mr-auto ml-auto text-center ">
+                <div class="w-full flex justify-center items-center">
+                    <p>View more</p>
+                    <i class="fa-solid fa-chevron-down text-[8px] ml-[5px] p-[3px] bg-[#F14530] rounded-[50%] text-[#fff]"
+                        fill="#F14530">
+                    </i>
+                </div>
+            </div>
+        </div>
+        <!-- download app no -->
+        <div class="w-full h-auto mt-[220px] mb-[200px] bg-[#F14530]">
+            <div class="w-full max-w-[1350px] mr-auto ml-auto lg:flex lg:justify-between lg:gap-[30px]">
+                <div class="w-full max-w-[340px] relative mr-auto ml-auto lg:max-w-[550px]">
+                    <img src="assets/images/appFrame.png"
+                        class="absolute top-[-65px] z-[1] left-[20px] w-full max-w-[300px] object-contain lg:max-w-[650px] lg:left-[8px] lg:top-[-138px]"
+                        alt="">
+                    <img src="assets/images/mobile2sa 1.png"
+                        class="w-full relative z-20 object-contain mb-[-150px] mt-[-150px] max-w-[340px] absolute top-[-25px] lg:max-w-[550px] lg:mt-[-60px]"
+                        alt="">
+                    <div class="w-full h-full absolute top-[0px] bg-[#F14530] z-10 hidden left-[8px] lg:block"></div>
+                </div>
+                <div
+                    class="w-fit max-w-[500px] h-auto mt-[150px] mb-[40px] mr-auto ml-auto lg:mt-[40px] flex flex-col items-center lg:items-start ">
+                    <p class="text-[#fff] font-[300] text-[20px] xl:text-[24px] ">Put us in your pocket</p>
+                    <h1 class="text-[#fff] font-[500] text-[30px] xl:text-[42px]">DOWNLOAD APP</h1>
+                    <p
+                        class="text-[#fff] font-[300] text-[18px] leading-[1.2] mt-[10px] xl:text-[24px] pl-[10px] pr-[10px] text-center lg:text-left lg:pl-0 lg:pr-[0px]">
+                        Conveniently order stock for
+                        your store at any time on Joybox !</p>
+                    <div
+                        class="w-full h-auto mt-[31px] flex justify-center flex-col gap-2 items-center pl-[10px] pr-[10px] lg:pl-[0px] lg:pr-[0px]  pb-[10px] lg:flex-row  lg:justify-between">
+                        <div
+                            class="w-fit min-w-[300px]  h-auto p-[10px] bg-[#000] flex justify-around items-end rounded-[10px] lg:min-w-[230px] lg:p-[5px]">
+                            <i class="fa-brands fa-google-play text-[#fff] text-[28px] mb-[5px] mr-[10px]"></i>
+                            <div class="text-[#fff]">
+                                <p class="lg:leading-[1.3]">Get It on</p>
+                                <h4 class="text-[28px] font-[500] capitalize lg:leading-[1.3]">Google Play</h4>
+                            </div>
+                        </div>
+
+                        <div
+                            class="w-fit min-w-[300px] h-auto p-[10px] bg-[#000] flex justify-around items-end rounded-[10px] lg:min-w-[230px] lg:p-[5px]">
+                            <i class="fa-brands fa-apple text-[#fff] text-[35px] mb-[5px] mr-[10px]"></i>
+                            <div class="text-[#fff]">
+                                <p class="lg:leading-[1.3]">Download on the</p>
+                                <h4 class="text-[28px] font-[500] capitalize lg:leading-[1.3]">Apple Store</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+    </div>
+
+    <footer>
+        <div
+            class="w-full h-auto flex justify-center bg-[url(assets/images/map.png)] max-w-[1200px] bg-cover mr-auto ml-auto ">
+            <div
+                class=" w-full max-w-[300px] text-center bg-[#F5F5F5] rounded-[14px] p-[20px] mt-[-25px] mb-[-25px] sm:max-w-[340px]">
+                <h4 class="text-lg font-semibold">Contact Us</h4>
+                <div class="mb-[20px] mt-[10px] w-full">
+                    <input type="text" name="name" class="w-full px-3 rounded-full bg-[#D9D9D9]" placeholder="Name"
+                        value="" required>
+                </div>
+                <div class="mb-[20px] w-full">
+                    <input type="email" name="email" class="w-full px-3 rounded-full bg-[#D9D9D9]" placeholder="Email"
+                        value="" required>
+                </div>
+                <div class="mb-[20px] w-full">
+                    <input type="tel" pattern="03[0-9]{2}-(?!1234567)(?!1111111)(?!7654321)[0-9]{7}" minlength="11"
+                        name="number" class="w-full px-3 bg-[#D9D9D9] rounded-full" placeholder="Contact" required>
+                </div>
+                <div class="mb-[20px] w-full">
+                    <textarea id="w3review" name="message" rows="4"
+                        class="form-textarea w-full px-3 rounded-[20px] bg-[#D9D9D9]" placeholder="Message"
+                        required></textarea>
+                </div>
+
+                <button type="submit"
+                    class="block text-center text-[#000] font-semibold bg-[#F5D547] py-2 px-6 rounded-full min-w-[150px] mr-auto ml-auto">
+                    Submit
+                </button>
+            </div>
+        </div>
+        <div
+            class="bg-[url(assets/images/footer-yellowbg.png)] px-[10px]  pt-[3rem] bg-cover w-full max-w-[1200px] mr-auto ml-auto lg:px-12 lg:pt-12 pb-[20px]">
+            <div class="flex justify-between items-start">
+                <div class="max-w-[380px]">
+                    <img class="w-full max-w-[50px] md:max-w-[70px] lg:max-w-[95px] mb-[15px]"
+                        src="assets/images/joyBoxLogo.png">
+                    <p
+                        class="lg:text-[11px] tracking-[-0.03rem] text-[7px] mb-[10px] sm:text-[10px] md:text-[13px] leading-[1.3]">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essent</p>
+                    <p class="text-[11px] tracking-[-0.03rem] mb-[10px] hidden leading-[1.3] lg:block">Lorem Ipsum is
+                        simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                        leap into electronic typesetting, remaining essent</p>
+
+                    <div class="w-full lg:p-[10px]  flex item-center gap-[10px] ">
+                        <i class="fa-brands fa-square-facebook text-[20px]  lg:text-[25px]"></i>
+                        <i class="fa-brands fa-square-instagram text-[20px] lg:text-[25px]"></i>
+                    </div>
+                </div>
+                <img class="w-full max-w-[100px] sm:max-w-[150px] lg:max-w-[246px] object-contain"
+                    src="assets/images/footer-logo.png">
+            </div>
+            <p class="text-center text-[9px] sm:text-[10px] lg:text-[14px] font-[400]">© 2023 JOYBOX</p>
+
+        </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</body>
+
+</html>
